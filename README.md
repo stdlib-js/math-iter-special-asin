@@ -34,38 +34,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-iter-special-asin
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-iterAsin = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-special-asin@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var iterAsin = require( 'path/to/vendor/umd/math-iter-special-asin/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-special-asin@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.iterAsin;
-})();
-</script>
+var iterAsin = require( '@stdlib/math-iter-special-asin' );
 ```
 
 #### iterAsin( iterator )
@@ -118,14 +110,9 @@ The returned [iterator][mdn-iterator-protocol] protocol-compliant object has the
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-special-asin@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var uniform = require( '@stdlib/random-iter-uniform' );
+var iterAsin = require( '@stdlib/math-iter-special-asin' );
 
 // Create a seeded iterator for generating pseudorandom numbers:
 var rand = uniform( -1.0, 1.0, {
@@ -145,11 +132,6 @@ while ( true ) {
     }
     console.log( r.value );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -254,13 +236,13 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/asin]: https://github.com/stdlib-js/math-base-special-asin/tree/umd
+[@stdlib/math/base/special/asin]: https://github.com/stdlib-js/math-base-special-asin
 
-[@stdlib/math/iter/special/acos]: https://github.com/stdlib-js/math-iter-special-acos/tree/umd
+[@stdlib/math/iter/special/acos]: https://github.com/stdlib-js/math-iter-special-acos
 
-[@stdlib/math/iter/special/asinh]: https://github.com/stdlib-js/math-iter-special-asinh/tree/umd
+[@stdlib/math/iter/special/asinh]: https://github.com/stdlib-js/math-iter-special-asinh
 
-[@stdlib/math/iter/special/atan]: https://github.com/stdlib-js/math-iter-special-atan/tree/umd
+[@stdlib/math/iter/special/atan]: https://github.com/stdlib-js/math-iter-special-atan
 
 <!-- </related-links> -->
 
