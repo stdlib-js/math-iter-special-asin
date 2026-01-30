@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2020 The Stdlib Authors.
@@ -16,16 +16,28 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { Iterator as Iter, IterableIterator } from '@stdlib/types/iter';
+
+// Define a union type representing both iterable and non-iterable iterators:
+type Iterator = Iter | IterableIterator;
 
 /**
-* Create an iterator which iteratively computes the arcsine.
+* Returns an iterator which iteratively computes the arcsine.
 *
-* @module @stdlib/math-iter-special-asin
+* ## Notes
+*
+* -   The domain of arcsine is restricted to `[-1,1]`. If an iterated value is outside of the domain, the returned iterator returns `NaN`.
+* -   If an environment supports `Symbol.iterator` **and** a provided iterator is iterable, the returned iterator is iterable.
+*
+* @param iterator - input iterator
+* @returns iterator
 *
 * @example
 * var uniform = require( '@stdlib/random-iter-uniform' );
-* var iterAsin = require( '@stdlib/math-iter-special-asin' );
 *
 * var iter = iterAsin( uniform( -1.0, 1.0 ) );
 *
@@ -40,12 +52,9 @@
 *
 * // ...
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function iterAsin( iterator: Iterator ): Iterator;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = iterAsin;
